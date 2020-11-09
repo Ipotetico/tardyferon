@@ -1,0 +1,1124 @@
+$tardyferon_bordo: #ab297d;
+$tardyferon_rose: #c1599c;
+$tardyferon_salmon: #f9eaf2;
+
+/* montserrat-regular - latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/montserrat-v14-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local("Montserrat Regular"), local("Montserrat-Regular"),
+    url("../fonts/montserrat-v14-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/montserrat-v14-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../fonts/montserrat-v14-latin-regular.woff") format("woff"),
+    /* Modern Browsers */ url("../fonts/montserrat-v14-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/montserrat-v14-latin-regular.svg#Montserrat") format("svg"); /* Legacy iOS */
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../img/tardyferon_tlo_landscape_2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.silBtn {
+  z-index: 11;
+  top: 2em;
+  right: 2em;
+  z-index: 10;
+  position: absolute;
+  width: 3em;
+  height: 3em;
+  background-image: url(../img/rozowa_kulka.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+h1 {
+  font-family: "Montserrat Bold", sans-serif;
+  font-weight: 700;
+}
+
+.container {
+  position: relative;
+  width: 1040px;
+  height: 735px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .icons {
+    z-index: 5;
+    width: 100%;
+    height: 10em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    bottom: 0;
+
+    &.active {
+      z-index: 16;
+    }
+
+    div {
+      width: 30em;
+    }
+
+    .who {
+      z-index: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      background-position: left;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 28em;
+      height: 6em;
+      background-image: url(../img/WHO.svg);
+      bottom: 50%;
+      left: 50%;
+      transform: translate(-40%, -50%) scale(1);
+      left: 12em;
+      bottom: 0em;
+      transition: 0.5s;
+      cursor: pointer;
+      box-shadow: rgba($color: #000000, $alpha: 0.7);
+
+      p {
+        position: absolute;
+        // visibility: hidden;
+        font-size: 0.4em;
+        bottom: 0em;
+      }
+    }
+
+    .dawkowanie {
+      opacity: 0;
+      position: absolute;
+      height: 15em;
+      width: 20em;
+      bottom: 0em;
+      transform: translate(-40%, -50%) scale(0.5);
+      transition: 0.5s;
+      background-image: url(../img/dawkowanie_1.svg);
+
+      border-radius: 0.5em;
+      left: -5em;
+
+      img:nth-of-type(1) {
+        position: absolute;
+        width: 5em;
+        top: 10.1em;
+        left: 1em;
+      }
+
+      img:nth-of-type(2) {
+        position: absolute;
+        width: 4em;
+        top: 7em;
+        right: -1.3em;
+      }
+
+      &.active {
+        z-index: 20;
+        opacity: 1;
+        transform: translate(-20%, 5%) scale(1.4);
+        bottom: 7em;
+        box-shadow: 0 1em 2em rgba($color: #000000, $alpha: 0.7);
+      }
+    }
+
+    .tardyLogo {
+      z-index: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      top: 50%;
+      right: 50%;
+      transform: translate(-200%, -60%) scale(1);
+      position: absolute;
+      right: 0;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 10em;
+      height: 10em;
+      background-image: url(../img/logo_Tardyferon.svg);
+      transition: 0.5s;
+
+      &.active {
+        z-index: 15;
+        transform: translate(-200%, -60%) scale(2);
+      }
+    }
+
+    .tardyFol {
+      top: 50%;
+      right: 50%;
+      transform: translate(-10%, -60%) scale(1);
+      position: absolute;
+      right: 0;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 10em;
+      height: 10em;
+      background-image: url(../img/tardy_fol.svg);
+      transition: 0.5s;
+
+      .dawkowanie {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 15em;
+        background-image: url(../img/dawkowanie_2@4x.png);
+        left: -13em;
+
+        img:nth-of-type(1) {
+          position: absolute;
+          width: 5em;
+          top: 8em;
+          left: 2.7em;
+        }
+
+        img:nth-of-type(2) {
+          position: absolute;
+          width: 4em;
+          top: 7em;
+          right: -1.3em;
+        }
+
+        &.active {
+          opacity: 1;
+          transform: scale(1.4);
+          bottom: 7em;
+          box-shadow: 0 1em 2em rgba($color: #000000, $alpha: 0);
+          bottom: 6em;
+          left: -17em;
+        }
+      }
+
+      &.active {
+        z-index: 15;
+        transform: translate(-30%, -80%) scale(2);
+      }
+    }
+  }
+}
+
+.navigation {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  height: 5em;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+
+  .kulka {
+    width: 12em;
+    height: 6em;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50px;
+    box-shadow: 0 0em 0em rgba($color: #000000, $alpha: 0.7);
+
+    &:nth-of-type(1) {
+      background-image: url(../img/biodostepnosc.svg);
+    }
+    &:nth-of-type(2) {
+      background-image: url(../img/dawka_80mg.svg);
+    }
+    &:nth-of-type(3) {
+      background-image: url(../img/tolerancja.svg);
+    }
+    &:nth-of-type(4) {
+      background-image: url(../img/niedobor_zelaza@4x.png);
+    }
+  }
+}
+
+.page {
+  position: absolute;
+  z-index: 0;
+  width: 95%;
+  height: 95%;
+  background-color: #f9eaf2;
+  border: 3px solid $tardyferon_bordo;
+  border-radius: 3em;
+  display: flex;
+  justify-content: center;
+  transform: scale(0);
+  transition: 0.5s;
+  box-shadow: 0 5px 2em black;
+
+  &.active {
+    transform: scale(1);
+    z-index: 15;
+  }
+
+  p {
+    position: absolute;
+    font-size: 0.3em;
+    color: black;
+    height: 1em;
+    bottom: 1em;
+    left: 7em;
+    font-size: 0.5em;
+  }
+}
+
+.headline {
+  position: absolute;
+  top: 3.2em;
+  background-color: #c1599c;
+  color: white;
+  width: 90%;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  font-weight: 800;
+
+  sup {
+    position: relative;
+    top: -0.5em;
+    font-weight: 200;
+    font-size: 0.4em;
+    margin-left: 0.1em;
+  }
+}
+
+.subheadline {
+  position: absolute;
+  top: 5.4em;
+  color: black;
+  width: 85%;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 2em;
+  font-weight: 800;
+
+  img {
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 1em;
+  }
+
+  h1 {
+    font-size: 0.9em;
+    sup {
+      font-size: 0.4em;
+      margin-left: -0.5em;
+    }
+  }
+}
+
+.wykres {
+  position: absolute;
+  top: 36%;
+  width: 35em;
+  height: 25em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.close {
+  z-index: 35;
+  position: absolute;
+  top: 1.5em;
+  right: 2em;
+  width: 4em;
+  height: 4em;
+  border: 0.3em solid $tardyferon_bordo;
+  border-radius: 50%;
+  background-image: url(../img/kulka.svg);
+}
+
+.overlay {
+  z-index: 0;
+  position: absolute;
+  // top: 50%;
+  // left: 50%;
+  width: 100vw;
+  height: 100vh;
+  // transform: translate(-50%, -50%);
+  background-color: darken($color: $tardyferon_bordo, $amount: 15%);
+  opacity: 0;
+  transition: 0.5s;
+
+  &.active {
+    z-index: 10;
+    opacity: 0.7;
+  }
+}
+
+// ===== BIODOSTEPNOSC =====
+
+#bio {
+  p {
+    margin-bottom: 1em;
+  }
+  .wykres {
+    background-image: url(../img/wykres_biodostepnosc.svg);
+
+    &.active {
+      .pole {
+        bottom: 4.6em;
+        background-color: darkgray;
+        color: white;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        width: 6em;
+
+        h1 {
+          margin-bottom: 0.5em;
+        }
+        h2 {
+          margin-bottom: 0.5em;
+        }
+
+        &.pole:nth-of-type(1) {
+          left: 10.5em;
+          background-color: $tardyferon_bordo;
+          position: absolute;
+          height: 15em;
+          animation: slupekRosnie1 2s ease-in-out;
+
+          @keyframes slupekRosnie1 {
+            0% {
+              height: 0;
+            }
+
+            100% {
+              height: 15em;
+            }
+          }
+        }
+
+        &.pole:nth-of-type(2) {
+          left: 18.5em;
+          position: absolute;
+          height: 12em;
+          animation: slupekRosnie2 2s ease-in-out;
+
+          @keyframes slupekRosnie2 {
+            0% {
+              height: 0;
+            }
+
+            100% {
+              height: 12em;
+            }
+          }
+        }
+
+        &.pole:nth-of-type(3) {
+          left: 27.5em;
+          position: absolute;
+          height: 2.6em;
+          animation: slupekRosnie3 2s ease-in-out;
+
+          @keyframes slupekRosnie3 {
+            0% {
+              height: 0;
+            }
+
+            100% {
+              height: 2.6em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// =====  WHO  =====
+
+#who {
+  .container {
+    left: 6em;
+    top: 2em;
+    width: 85%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  p {
+    margin-bottom: 2em;
+  }
+
+  h1 {
+    text-align: left;
+    margin-bottom: 2em;
+    display: flex;
+    align-items: center;
+
+    .ptaszek {
+      margin-right: 0.5em;
+      width: 1.5em;
+      height: 1.5em;
+      background-image: url(../img/ptaszek_pusty.svg);
+      transition: 0.5s;
+      transform: scale(0.6);
+
+      &.active {
+        background-image: url(../img/ptaszek_z_ptaszkiem.svg);
+        transform: scale(1);
+      }
+    }
+
+    span {
+      font-family: "Montserrat";
+      color: $tardyferon_bordo;
+      font-weight: 700;
+      margin: 0.3em;
+      font-size: 0.95em;
+      margin-bottom: 0.5em;
+    }
+
+    &:nth-of-type(1) {
+      margin-top: 10em;
+    }
+  }
+}
+
+// ===== 80mg =====
+
+#mg {
+  p {
+    margin-bottom: 3em;
+  }
+
+  .przypisy {
+    position: absolute;
+    margin-left: 75em;
+  }
+
+  .subheadline {
+    margin-top: 0.7em;
+  }
+  .paski {
+    position: absolute;
+    top: 18em;
+    width: 80%;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    color: white;
+
+    .pasek1,
+    .pasek2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      width: 50%;
+      background-color: $tardyferon_rose;
+    }
+
+    .pasek2 {
+      background-color: $tardyferon_bordo;
+    }
+  }
+
+  .wykres {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+
+    .napis,
+    .one,
+    .two,
+    .three {
+      visibility: hidden;
+    }
+
+    &.active {
+      .napis {
+        visibility: visible;
+        z-index: 5;
+        position: absolute;
+        width: 25em;
+        height: 10em;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .one {
+        background-image: url(../img/zmniejszenie_zmeczenia.svg);
+        top: 9.5em;
+        left: 11em;
+
+        animation: grow1 2s ease-in-out;
+        transform: scale(1);
+
+        @keyframes grow1 {
+          0% {
+            transform: scale(0);
+          }
+
+          50% {
+            transform: scale(1);
+          }
+        }
+      }
+
+      .two {
+        background-image: url(../img/szybka_normalizacja.svg);
+        top: 5em;
+        left: 30em;
+        animation: grow2 2s ease-in-out;
+        transform: scale(1);
+
+        @keyframes grow2 {
+          0% {
+            transform: scale(0);
+          }
+          20% {
+            transform: scale(0);
+          }
+
+          70% {
+            transform: scale(1);
+          }
+        }
+      }
+
+      .three {
+        background-image: url(../img/po_3_mies.svg);
+        bottom: 2em;
+        left: 32em;
+        animation: grow3 2s ease-in-out;
+        transform: scale(1);
+
+        @keyframes grow3 {
+          0% {
+            transform: scale(0);
+          }
+          50% {
+            transform: scale(0);
+          }
+
+          100% {
+            transform: scale(1);
+          }
+        }
+      }
+    }
+  }
+
+  svg {
+    position: absolute;
+    bottom: 0em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20em;
+    height: 20em;
+    fill: none;
+
+    &.active {
+      circle {
+        width: 100%;
+        height: 100%;
+        fill: none;
+        stroke-width: 10;
+        stroke-linecap: round;
+        stroke: $tardyferon_bordo;
+        stroke-dasharray: 2400;
+        stroke-dashoffset: 0;
+
+        transform: translate(5px, 5px);
+        animation: rotate 3s ease-in-out;
+
+        @keyframes rotate {
+          0% {
+            stroke-dasharray: 1200;
+            stroke-dashoffset: 1200;
+          }
+
+          100% {
+            stroke-dasharray: 2400;
+            stroke-dashoffset: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ===== TOLERANCJA =====
+
+.joint {
+  z-index: 15;
+  width: 100vw;
+  height: 90vh;
+  transform: scale(0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  overflow: hidden;
+
+  .close {
+    right: 3em;
+    top: 2em;
+  }
+
+  &.active {
+    transform: scale(1);
+  }
+
+  .change {
+    z-index: 20;
+    position: absolute;
+    right: 4em;
+    top: 50%;
+    width: 4em;
+    height: 4em;
+    background-image: url(../img/kulka_change.svg);
+    transform: rotate(0deg);
+    transition: 0.7s;
+
+    &.active {
+      transform: rotate(-180deg);
+    }
+  }
+
+  #toler {
+    .subheadline {
+      top: 6em;
+    }
+
+    box-shadow: 0 0 1em black;
+
+    .headline {
+      h1 {
+        font-size: 0.5em;
+        top: 4em;
+      }
+    }
+    overflow: hidden;
+    .container1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform: translateX(0%);
+      transition: 0.5s;
+
+      &.active {
+        transform: translateX(-100%);
+      }
+
+      p {
+        bottom: 2.5em;
+        left: 5em;
+      }
+      .wykres {
+        height: 24.6em;
+        width: 38.5em;
+        left: 11em;
+        bottom: 6em;
+        background-image: url(../img/wykres_toler_1.svg);
+
+        &.active {
+          .pole {
+            bottom: 6em;
+            background-color: darkgray;
+            color: white;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            width: 5em;
+            transform: translateX(1.5em);
+
+            h1 {
+              font-size: 0.5em;
+              margin-bottom: 0.5em;
+            }
+            h2 {
+              margin-bottom: 0.5em;
+            }
+
+            &.pole:nth-of-type(1) {
+              left: 7em;
+              position: absolute;
+              height: 12em;
+              animation: slupekRosnie4 2s ease-in-out;
+
+              @keyframes slupekRosnie4 {
+                0% {
+                  height: 0;
+                }
+
+                100% {
+                  height: 12em;
+                }
+              }
+            }
+
+            &.pole:nth-of-type(2) {
+              left: 14.2em;
+              position: absolute;
+              height: 11.5em;
+              animation: slupekRosnie5 2s ease-in-out;
+
+              @keyframes slupekRosnie5 {
+                0% {
+                  height: 0;
+                }
+
+                100% {
+                  height: 11.5em;
+                }
+              }
+            }
+
+            &.pole:nth-of-type(3) {
+              left: 21em;
+              position: absolute;
+              height: 3.1em;
+              animation: slupekRosnie6 2s ease-in-out;
+
+              @keyframes slupekRosnie6 {
+                0% {
+                  height: 0;
+                }
+
+                100% {
+                  height: 3.1em;
+                }
+              }
+            }
+            &.pole:nth-of-type(4) {
+              background-color: $tardyferon_bordo;
+              left: 28em;
+              position: absolute;
+              height: 1.8em;
+              animation: slupekRosnie7 2s ease-in-out;
+
+              @keyframes slupekRosnie7 {
+                0% {
+                  height: 0;
+                }
+
+                100% {
+                  height: 1.8em;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .container2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform: translateX(0);
+      transition: 0.5s;
+
+      &.active {
+        transform: translateX(100%);
+      }
+
+      p {
+        margin-bottom: 1em;
+      }
+      .wykres {
+        background-image: url(../img/wykres_toler_2.svg);
+
+        &.active {
+          .pole {
+            bottom: 6em;
+            background-color: darkgray;
+            color: white;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            width: 5em;
+
+            h2 {
+              margin-bottom: 0.5em;
+            }
+
+            &.pole:nth-of-type(1) {
+              left: 7.5em;
+              position: absolute;
+              height: 12em;
+              animation: slupekRosnie8 2s ease-in-out;
+
+              @keyframes slupekRosnie8 {
+                0% {
+                  height: 0;
+                }
+
+                100% {
+                  height: 12em;
+                }
+              }
+            }
+
+            &.pole:nth-of-type(2) {
+              left: 14.2em;
+              position: absolute;
+              height: 11em;
+              animation: slupekRosnie9 2s ease-in-out;
+
+              @keyframes slupekRosnie9 {
+                0% {
+                  height: 0;
+                }
+
+                100% {
+                  height: 11em;
+                }
+              }
+            }
+
+            &.pole:nth-of-type(3) {
+              left: 20.75em;
+              position: absolute;
+              height: 2.8em;
+              animation: slupekRosnie10 2s ease-in-out;
+
+              @keyframes slupekRosnie10 {
+                0% {
+                  height: 0;
+                }
+
+                100% {
+                  height: 2.8em;
+                }
+              }
+            }
+            &.pole:nth-of-type(4) {
+              background-color: $tardyferon_bordo;
+              left: 27.5em;
+              position: absolute;
+              height: 1.7em;
+              animation: slupekRosnie11 2s ease-in-out;
+
+              @keyframes slupekRosnie11 {
+                0% {
+                  height: 0;
+                }
+
+                100% {
+                  height: 1.7em;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ===== NIEDOBOR ZELAZA =====
+
+#niedobor {
+  h1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0em;
+    transition: 0.5s;
+  }
+  &.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .headline {
+      font-size: 1.8em;
+      sup {
+        margin-bottom: 1em;
+        font-size: 15px;
+      }
+    }
+    .subheadline {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      height: 65%;
+      top: 6em;
+      left: 2em;
+
+      h1 {
+        display: flex;
+        align-items: center;
+        // margin-bottom: 2em;
+      }
+    }
+    p {
+      margin-bottom: 1em;
+    }
+  }
+
+  .fotka {
+    position: absolute;
+    background-color: aquamarine;
+    border-radius: 50%;
+    border: 0.3em solid $tardyferon_bordo;
+    transform: scale(0);
+    transition: 1s;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &.active {
+      transform: scale(1);
+
+      @keyframes grow {
+        0% {
+          transform: scale(0);
+        }
+
+        100% {
+          transform: scale(1);
+        }
+      }
+    }
+
+    &:nth-of-type(3) {
+      left: 68.5%;
+      top: 27%;
+      width: 8em;
+      height: 8em;
+      background-image: url(../img/pani_zmieczona.png);
+    }
+
+    &:nth-of-type(4) {
+      left: 61.5%;
+      top: 45%;
+      width: 9em;
+      height: 9em;
+      background-image: url(../img/chlopiec.png);
+    }
+
+    &:nth-of-type(5) {
+      left: 51.5%;
+      top: 63%;
+      width: 11em;
+      height: 11em;
+      background-image: url(../img/insomnia.png);
+    }
+
+    &:nth-of-type(6) {
+      left: 79%;
+      top: 40%;
+      width: 9em;
+      height: 9em;
+      background-image: url(../img/zawroty.png);
+    }
+
+    &:nth-of-type(7) {
+      left: 71%;
+      top: 63%;
+      width: 10em;
+      height: 10em;
+      background-image: url(../img/pale.png);
+    }
+  }
+}
+
+// ===== SiL =====
+
+#sil {
+  width: 55%;
+  background-image: url(../img/SiL.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  h1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0em;
+    transition: 0.5s;
+  }
+  &.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .headline {
+      sup {
+        font-size: 15px;
+      }
+    }
+    .subheadline {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      top: 6em;
+      left: 2em;
+
+      h1 {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2em;
+      }
+    }
+    p {
+      margin-bottom: 1em;
+    }
+  }
+  .close {
+    right: -0.5em;
+    top: -0.5em;
+  }
+}
